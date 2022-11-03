@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: SettingsScreen(),
-        initialRoute: '/login',
+        //initialRoute: '/login',
         debugShowCheckedModeBanner: false,
         title: 'Classified App',
         theme: CustomTheme().theme);

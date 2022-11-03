@@ -1,28 +1,36 @@
 import 'package:flutter/material.dart';
 
-class ProductCard extends StatefulWidget {
-  const ProductCard({
+class AdsCard extends StatefulWidget {
+  String imageUrl;
+  String title;
+  String createdAt;
+  num price;
+
+  AdsCard({
     super.key,
+    required this.imageUrl,
+    required this.title,
+    required this.createdAt,
+    required this.price,
   });
 
   @override
-  State<ProductCard> createState() => _ProductCardState();
+  State<AdsCard> createState() => _AdsCardState();
 }
 
-class _ProductCardState extends State<ProductCard> {
+class _AdsCardState extends State<AdsCard> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: Container(
-        margin: EdgeInsets.all(4),
-        child: Row(children: [
-          Image.asset(""),
-          Column(
-            children: [Text(""), Text(""), Text("")],
-          )
+    return Container(
+      margin: EdgeInsets.all(4),
+      child: Row(children: [
+        Image.asset(widget.imageUrl),
+        Column(children: [
+          Text(widget.title),
+          Text(widget.createdAt),
+          Text(widget.price.toString())
         ]),
-      ),
+      ]),
     );
   }
 }
