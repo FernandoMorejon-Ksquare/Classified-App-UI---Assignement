@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:itksquare_project1/custom_widgets/custom_theme.dart';
 import 'package:go_router/go_router.dart';
-import 'package:itksquare_project1/router/router.dart';
+import 'package:itksquare_project1/tooling/router.dart';
 import 'package:itksquare_project1/screens/homeScreen.dart';
 import 'package:itksquare_project1/screens/loginScreen.dart';
 import 'package:itksquare_project1/screens/settingsScreen.dart';
-
 import 'screens/EditProfileScreen.dart';
 
 void main() {
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: SettingsScreen(),
+        home: LoginScreen(),
         //initialRoute: '/login',
         debugShowCheckedModeBanner: false,
         title: 'Classified App',

@@ -3,6 +3,17 @@ import 'package:itksquare_project1/screens/EditProfileScreen.dart';
 import 'package:itksquare_project1/screens/MyAdsScreen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+//URL LAUNCHER
+final Uri _url1 = Uri.parse("https://appmaking.com/about");
+final Uri _url2 = Uri.parse("https://appmaking.com/contact");
+
+Future<void> _launchUrl(Uri) async {
+  if (!await launchUrl(Uri)) {
+    throw 'Could not launch $Uri';
+  }
+}
+
+//MAIN WIDGET
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
 
@@ -74,20 +85,27 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ],
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 32, bottom: 32),
-                child: Row(
-                  children: [
-                    Container(
-                        margin: EdgeInsets.only(right: 24),
-                        child: Icon(Icons.account_circle_rounded)),
-                    Text("About Us")
-                  ],
+              GestureDetector(
+                onTap: (() {
+                  _launchUrl(_url1);
+                }),
+                child: Container(
+                  margin: EdgeInsets.only(top: 32, bottom: 32),
+                  child: Row(
+                    children: [
+                      Container(
+                          margin: EdgeInsets.only(right: 24),
+                          child: Icon(Icons.account_circle_rounded)),
+                      Text("About Us")
+                    ],
+                  ),
                 ),
               ),
               Row(children: [
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    _launchUrl(_url2);
+                  },
                   child: Container(
                       margin: EdgeInsets.only(right: 24),
                       child: Icon(Icons.contacts)),

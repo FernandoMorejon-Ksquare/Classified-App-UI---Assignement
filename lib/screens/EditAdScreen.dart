@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class EditAdScreen extends StatefulWidget {
-  const EditAdScreen({super.key});
+  List? myAds;
+
+  EditAdScreen({super.key, required List myAds});
 
   @override
   State<EditAdScreen> createState() => _EditAdScreenState();
@@ -34,7 +37,19 @@ class _EditAdScreenState extends State<EditAdScreen> {
           SizedBox(
             height: 32,
           ),
+          ListView.builder(
+            itemCount: 3,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              return Container(
+                height: 60,
+                width: 60,
+                child: Image.network(widget.myAds![index]["images"]),
+              );
+            },
+          ),
           TextFormField(
+            // initialValue: widget.myAds!["title"],
             decoration: InputDecoration(
                 hintText: 'Title',
                 enabledBorder: OutlineInputBorder(

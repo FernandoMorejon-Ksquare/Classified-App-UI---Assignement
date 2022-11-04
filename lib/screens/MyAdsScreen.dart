@@ -63,7 +63,9 @@ class _MyAdsScreenState extends State<MyAdsScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => EditAdScreen()));
+                          builder: (BuildContext context) => EditAdScreen(
+                                myAds: [myAds],
+                              )));
                 },
                 child: Container(
                   height: 80,

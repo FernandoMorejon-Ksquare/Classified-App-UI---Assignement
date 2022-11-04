@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:itksquare_project1/custom_widgets/product_card.dart';
+import 'package:itksquare_project1/screens/CreateAdScreen.dart';
+import 'package:itksquare_project1/screens/settingsScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -86,7 +88,10 @@ class HomeScreen extends StatelessWidget {
         title: Text("Ads Listing"),
         actions: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: ((context) => SettingsScreen())));
+            },
             child: CircleAvatar(
               radius: 25,
               child: Image.asset("images/profilephoto.png"),
@@ -95,7 +100,11 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add_a_photo_outlined), onPressed: () {}),
+          child: Icon(Icons.add_a_photo_outlined),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: ((context) => CreateAdScreen())));
+          }),
       body: SafeArea(
         child: Container(
             child: GridView.builder(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'homeScreen.dart';
 import 'loginScreen.dart';
 
@@ -67,7 +66,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             Container(
               margin: EdgeInsets.only(top: 16),
-              height: 50,
+              height: 45,
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
@@ -81,7 +80,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             Container(
               margin: EdgeInsets.only(top: 8),
-              height: 50,
+              height: 45,
               width: double.infinity,
               child: TextButton(
                 onPressed: () {
