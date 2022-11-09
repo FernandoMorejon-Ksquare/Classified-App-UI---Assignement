@@ -112,10 +112,13 @@ class HomeScreen extends StatelessWidget {
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2, crossAxisSpacing: 4, mainAxisSpacing: 4),
                 itemBuilder: (context, index) {
-                  return ProductCard(
-                    imageUrl: _ads[index]['images'[0]].toString(),
-                    name: _ads[index]["title"].toString(),
-                    price: _ads[index]['price'],
+                  return GestureDetector(
+                    onTap: () {},
+                    child: ProductCard(
+                      imageUrl: _ads[index]['images'][0],
+                      name: _ads[index]["title"].toString(),
+                      price: _ads[index]['price'],
+                    ),
                   );
                 })),
       ),

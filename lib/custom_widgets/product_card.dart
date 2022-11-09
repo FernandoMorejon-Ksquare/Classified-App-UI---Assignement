@@ -24,10 +24,10 @@ class _ProductCardState extends State<ProductCard> {
       child: Container(
         margin: EdgeInsets.all(4),
         child: Stack(children: [
-          // Image.network(
-          //   widget.imageUrl,
-          //   fit: BoxFit.cover,
-          // ),
+          Image.network(
+            widget.imageUrl,
+            fit: BoxFit.cover,
+          ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
