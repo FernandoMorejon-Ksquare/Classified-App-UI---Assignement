@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:itksquare_project1/screens/MyAdsScreen.dart';
+import 'package:itksquare_project1/screens/ProductDetailScreen.dart';
 import 'package:itksquare_project1/screens/homeScreen.dart';
 import 'package:itksquare_project1/screens/loginScreen.dart';
 import 'package:itksquare_project1/screens/registerScreen.dart';
@@ -20,6 +21,16 @@ class RouteGenerator {
 
       case '/my-ads':
         return MaterialPageRoute(builder: (context) => MyAdsScreen());
+
+      // case '/productDetail':
+      //   return MaterialPageRoute(
+      //       builder: ((context) => ProductDetailScreen(
+      //           title: title,
+      //           imageUrl: imageUrl,
+      //           price: price,
+      //           seller: seller,
+      //           timesAgo: timesAgo,
+      //           productDescription: productDescription)));
     }
   });
 }

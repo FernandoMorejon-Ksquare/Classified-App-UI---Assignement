@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Ads Listing"),
+        title: const Text("Ads Listing"),
         actions: [
           GestureDetector(
             onTap: () {
@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add_a_photo_outlined),
+          child: const Icon(Icons.add_a_photo_outlined),
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: ((context) => CreateAdScreen())));
